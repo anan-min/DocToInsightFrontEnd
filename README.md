@@ -7,6 +7,70 @@ A modern Angular application for AI-powered document analysis. Upload documents 
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1-teal?style=flat-square&logo=tailwindcss)
 ![PrimeNG](https://img.shields.io/badge/PrimeNG-19.1-blue?style=flat-square)
 
+## 🚀 Quick Start - How to Run the Project
+
+### 📋 Prerequisites
+- Node.js (v18 or higher)
+- npm (v9 or higher)
+- Backend API running on `http://localhost:4444`
+
+### 🏃‍♂️ **Manual Setup (Recommended for Development)**
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/anan-min/DocToInsightFrontEnd.git
+   cd DocToInsightFrontEnd
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm start
+   # or
+   ng serve
+   ```
+
+4. **Open your browser**
+   - Navigate to `http://localhost:4200/`
+   - The application will automatically reload when you change source files
+
+### 🐳 **Docker Setup (Alternative)**
+
+If you prefer using Docker:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/anan-min/DocToInsightFrontEnd.git
+   cd DocToInsightFrontEnd
+   ```
+
+2. **Build and run with Docker**
+   ```bash
+   # Build the Docker image
+   docker build -t doc-to-insight-frontend .
+   
+   # Run the container
+   docker run -p 4200:4200 doc-to-insight-frontend
+   ```
+
+3. **Or use Docker Compose** (if available)
+   ```bash
+   # Start the application
+   docker-compose up --build
+   
+   # Stop the application
+   docker-compose down
+   ```
+
+4. **Access the application**
+   - Navigate to `http://localhost:4200/`
+
+> **Note**: Make sure your backend API is running on `http://localhost:4444` before starting the frontend.
+
 ## 🚀 Features
 
 - **Single File Upload**: Upload one document at a time (up to 100MB)
@@ -26,43 +90,23 @@ A modern Angular application for AI-powered document analysis. Upload documents 
 - **HTTP Client**: Angular HttpClient
 - **State Management**: Component-based state
 
-## 📋 Prerequisites
+## 📋 Detailed Prerequisites
 
 Before running this project, make sure you have:
 
 - Node.js (v18 or higher)
 - npm (v9 or higher)
-- Angular CLI (`npm install -g @angular/cli`)
+- Angular CLI (`npm install -g @angular/cli`) - Optional but recommended
 - Backend API running on `http://localhost:4444`
 
-## 🏗️ Installation
+## 🏗️ Additional Setup (Optional)
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/anan-min/DocToInsightFrontEnd.git
-   cd DocToInsightFrontEnd
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Install PrimeNG and dependencies** (if not already installed)
-   ```bash
-   npm install primeng@^19.0.0 @primeuix/themes primeicons
-   ```
-
-## 🚀 Development
-
-### Start Development Server
+If you need to install PrimeNG and dependencies manually:
 ```bash
-ng serve
-# or
-npm start
+npm install primeng@^19.0.0 @primeuix/themes primeicons
 ```
 
-Navigate to `http://localhost:4200/`. The application will automatically reload when you change source files.
+## 🚀 Development Details
 
 ### Backend API Configuration
 
@@ -71,6 +115,12 @@ The frontend expects a backend API running on `http://localhost:4444`. Update th
 ```typescript
 DOC_API = 'http://localhost:4444'  // Change this if needed
 ```
+
+### Development Commands
+- `npm start` or `ng serve` - Start development server
+- `ng build` - Build for development
+- `ng build --configuration=production` - Build for production
+- `ng test` - Run unit tests
 
 ## 📁 Project Structure
 
