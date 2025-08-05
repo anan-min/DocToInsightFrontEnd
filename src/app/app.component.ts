@@ -171,10 +171,10 @@ export class AppComponent implements OnDestroy {
         const status = data.status;
 
         if (status === "processing") {
-          this.statusMessage = data.message || 'Processing...';
+          this.statusMessage = data.progress || 'Processing...';
           // Keep using local processing time for UI display
         } else if (status === "completed") {
-          this.statusMessage = data.message || 'Analysis completed';
+          this.statusMessage = data.progress || 'Analysis completed';
           this.results = data.result;
           this.isProcessing = false;
           this.clearStatusTimer();
